@@ -1,0 +1,40 @@
+<html>
+<body>
+
+
+<?php
+
+abstract class Auto
+{
+	abstract function save();
+
+	abstract function new();
+
+	function getName()
+	{
+		return 'Жить';
+	}
+}
+
+class Volvo extends Auto
+{
+	function save()
+	{
+		echo 'аааавтомобиль!';
+	}
+
+	function new()
+	{
+		echo 'новый аааавтомобиль!';
+	}
+
+	function getName()
+	{
+		echo parent::getName() . ' Здорово!';
+	}
+}
+
+?> 
+
+</body>
+</html>
